@@ -3,7 +3,7 @@ package com.example.projet;
 import java.util.List;
 import java.util.ArrayList;
 public class Binary {
-    public static List binary(int n, int n2, int n3) {
+    public static List binaryNum(int n, int n2, int n3) {
         List tab = new ArrayList();
         short ten = 0;
 

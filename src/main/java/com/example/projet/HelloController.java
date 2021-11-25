@@ -31,8 +31,8 @@ public abstract class HelloController implements Initializable {
         decimal.setOnAction(btnaction -> {
             String binar = "";
 
-            for(int numb = 0; numb < Binary.binary(parseInt(decimal.getText()),parseInt(decimal.getText()),parseInt(decimal.getText())).size(); numb++ ) {
-                binar = binar + String.valueOf(Binary.binary(parseInt(decimal.getText()), parseInt(decimal.getText()), parseInt(decimal.getText())).get(numb));
+            for(int numb = 0; numb < Binary.binaryNum(parseInt(decimal.getText()),parseInt(decimal.getText()),parseInt(decimal.getText())).size(); numb++ ) {
+                binar = binar + String.valueOf(Binary.binaryNum(parseInt(decimal.getText()), parseInt(decimal.getText()), parseInt(decimal.getText())).get(numb));
             }
             binary.setText(binar);
         });
@@ -44,7 +44,7 @@ public abstract class HelloController implements Initializable {
 
         //Roman number to Decimal
         decimal.setOnAction(btnaction -> {
-            roman.setText(Roman.romanNumber(parseInt(decimal.getText())));
+            //roman.setText(Roman.romanNumber(parseInt(decimal.getText())));
         });
     }
 }

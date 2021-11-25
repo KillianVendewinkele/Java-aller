@@ -8,6 +8,8 @@ public class Book {
     private int row;
     private int publication;
 
+    //---Getter and setter---
+
     public String getName() {
         return name;
     }

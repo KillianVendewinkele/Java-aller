@@ -41,5 +41,10 @@ public abstract class HelloController implements Initializable {
         binary.setOnAction(btnaction -> {
             decimal.setText(String.valueOf(Integer.parseInt(binary.getText(),2)));
         });
+
+        //Roman number to Decimal
+        decimal.setOnAction(btnaction -> {
+            roman.setText(Roman.romanNumber(parseInt(decimal.getText())));
+        });
     }
 }

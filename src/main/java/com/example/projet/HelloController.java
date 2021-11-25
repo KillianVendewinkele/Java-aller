@@ -29,7 +29,7 @@ public abstract class HelloController implements Initializable {
         decimal.setOnAction(btnaction -> {
             String binar = "";
 
-            for(int numb = 0; numb > Binary.binary(parseInt(decimal.getText()),parseInt(decimal.getText()),parseInt(decimal.getText())).size(); numb++ ) {
+            for(int numb = 0; numb < Binary.binary(parseInt(decimal.getText()),parseInt(decimal.getText()),parseInt(decimal.getText())).size(); numb++ ) {
                 binar = binar + String.valueOf(Binary.binary(parseInt(decimal.getText()), parseInt(decimal.getText()), parseInt(decimal.getText())).get(numb));
             }
 

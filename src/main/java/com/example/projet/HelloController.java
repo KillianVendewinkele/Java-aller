@@ -32,7 +32,7 @@ public abstract class HelloController implements Initializable {
             for(int numb = 0; numb < Binary.binary(parseInt(decimal.getText()),parseInt(decimal.getText()),parseInt(decimal.getText())).size(); numb++ ) {
                 binar = binar + String.valueOf(Binary.binary(parseInt(decimal.getText()), parseInt(decimal.getText()), parseInt(decimal.getText())).get(numb));
             }
-
+            binary.setText(binar);
         });
     }
 }

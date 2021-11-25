@@ -6,6 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import static java.lang.Double.parseDouble;
@@ -24,9 +26,13 @@ public abstract class HelloController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         decimal.setOnAction(btnaction -> {
-            decimal.setText(String.valueOf(parseInt(decimal.getText())));
+            String binar = "";
+
+            for(int numb = 0; numb > Binary.binary(parseInt(decimal.getText()),parseInt(decimal.getText()),parseInt(decimal.getText())).size(); numb++ ) {
+                binar = binar + String.valueOf(Binary.binary(parseInt(decimal.getText()), parseInt(decimal.getText()), parseInt(decimal.getText())).get(numb));
+            }
+
         });
     }
 }

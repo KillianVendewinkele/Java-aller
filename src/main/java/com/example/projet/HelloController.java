@@ -26,6 +26,8 @@ public abstract class HelloController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        //Decimal to Binary
         decimal.setOnAction(btnaction -> {
             String binar = "";
 
@@ -34,6 +36,8 @@ public abstract class HelloController implements Initializable {
             }
             binary.setText(binar);
         });
+
+        //Binary to Decimal
         binary.setOnAction(btnaction -> {
             decimal.setText(String.valueOf(Integer.parseInt(binary.getText(),2)));
         });

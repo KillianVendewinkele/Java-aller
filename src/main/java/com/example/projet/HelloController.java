@@ -2,15 +2,15 @@ package com.example.projet;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
-import static java.lang.Double.parseDouble;
 import static java.lang.Integer.parseInt;
 
 public abstract class HelloController implements Initializable {
@@ -27,8 +27,34 @@ public abstract class HelloController implements Initializable {
     @FXML
     private TextField roman;
 
+    @FXML
+    private Button btnNew;
+
+    @FXML
+    private AnchorPane globalBiblio;
+
+    @FXML
+    private AnchorPane globalStats;
+
+    @FXML
+    private VBox VboxStats;
+
+    @FXML
+    private Button btnMenu;
+
+    @FXML
+    private VBox VboxTable;
+
+    @FXML
+    private VBox VboxBtn;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        globalStats.getChildren().removeAll(VboxStats);
+        btnNew.setOnMouseClicked(btnMeteo -> {
+            globalStats.getChildren().addAll(VboxStats);
+        });
 
         //Decimal to Binary
         decimal.setOnAction(btnaction -> {

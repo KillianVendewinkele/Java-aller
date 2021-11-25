@@ -6,7 +6,7 @@ public class Book {
     private String resume;
     private int column;
     private int row;
-    private int publication;
+    private int release;
 
     //---Getter and setter---
 
@@ -50,11 +50,9 @@ public class Book {
         this.row = row;
     }
 
-    public int getPublication() {
-        return publication;
+    public int getRelease() {
+        return release;
     }
 
-    public void setPublication(int publication) {
-        this.publication = publication;
-    }
+    public void setRelease(int release) { this.release = release; }
 }

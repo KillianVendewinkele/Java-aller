@@ -34,5 +34,8 @@ public abstract class HelloController implements Initializable {
             }
             binary.setText(binar);
         });
+        binary.setOnAction(btnaction -> {
+            decimal.setText(String.valueOf(Integer.parseInt(binary.getText(),2)));
+        });
     }
 }

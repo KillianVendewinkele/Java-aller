@@ -19,7 +19,7 @@ public abstract class HelloController implements Initializable {
     private Label welcomeText;
 
     @FXML
-    private TextField decimal;
+    private TextField deci;
 
     @FXML
     private TextField binary;
@@ -31,22 +31,22 @@ public abstract class HelloController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         //Decimal to Binary
-        decimal.setOnAction(btnaction -> {
+        deci.setOnAction(btnaction -> {
             String binar = "";
 
-            for(int numb = 0; numb < Binary.binaryNum(parseInt(decimal.getText()),parseInt(decimal.getText()),parseInt(decimal.getText())).size(); numb++ ) {
-                binar = binar + String.valueOf(Binary.binaryNum(parseInt(decimal.getText()), parseInt(decimal.getText()), parseInt(decimal.getText())).get(numb));
+            for(int numb = 0; numb < Binary.binaryNum(parseInt(deci.getText()),parseInt(deci.getText()),parseInt(deci.getText())).size(); numb++ ) {
+                binar = binar + String.valueOf(Binary.binaryNum(parseInt(deci.getText()), parseInt(deci.getText()), parseInt(deci.getText())).get(numb));
             }
             binary.setText(binar);
         });
 
         //Binary to Decimal
         binary.setOnAction(btnaction -> {
-            decimal.setText(String.valueOf(Integer.parseInt(binary.getText(),2)));
+            deci.setText(String.valueOf(Integer.parseInt(binary.getText(),2)));
         });
 
         //Roman number to Decimal
-        decimal.setOnAction(btnaction -> {
+        deci.setOnAction(btnaction -> {
             //roman.setText(Roman.romanNumber(parseInt(decimal.getText())));
         });
     }

@@ -24,6 +24,9 @@ public abstract class HelloController implements Initializable {
     @FXML
     private TextField binary;
 
+    @FXML
+    private TextField roman;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

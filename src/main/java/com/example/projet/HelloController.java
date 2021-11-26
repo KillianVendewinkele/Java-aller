@@ -133,7 +133,7 @@ public class HelloController implements Initializable {
 
             //Roman number to Decimal
             deci.setOnAction(btnaction -> {
-                roman.setText(Roman.romanNumber(parseInt(deci.getText())));
+                roman.setText(Roman.RomanNumber(parseInt(deci.getText())));
             });
 
             title.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));

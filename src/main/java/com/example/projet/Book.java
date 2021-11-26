@@ -1,58 +1,68 @@
 package com.example.projet;
 
-public class Book {
-    private String name;
-    private String author;
-    private String resume;
-    private int column;
-    private int row;
-    private int release;
+public class Book{
 
-    //---Getter and setter---
+    private String title, author, resume;
+    private Integer column;
+    private Integer row;
+    private Integer publication;
 
-    public String getName() {
-        return name;
+    public Book(String title, String author, String resume, Integer column, Integer row, Integer publication){
+        this.title = title;
+        this.author = author;
+        this.resume = resume;
+        this.column = column;
+        this.row = row;
+        this.publication = publication;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getTitle(){
+        return this.title;
     }
 
-    public String getAuthor() {
-        return author;
+    public void setTitle( String title){
+        this.title = title;
     }
 
-    public void setAuthor(String author) {
+    public String getAuthor(){
+        return this.author;
+    }
+
+
+    public void setAuthor( String author){
         this.author = author;
     }
 
-    public String getResume() {
-        return resume;
+    public String getResume(){
+        return this.resume;
     }
 
-    public void setResume(String resume) {
+    public void setResume( String resume){
         this.resume = resume;
     }
 
-    public int getColumn() {
-        return column;
+    public Integer getColumn(){
+        return this.column;
     }
 
-    public void setColumn(int column) {
+    public void setColumn(Integer column) {
         this.column = column;
     }
 
-    public int getRow() {
-        return row;
+    public Integer getRow(){
+        return this.row;
     }
 
-    public void setRow(int row) {
+    public void setRow( Integer row){
         this.row = row;
     }
 
-    public int getRelease() {
-        return release;
+    public Integer getPublication(){
+        return this.publication;
     }
 
-    public void setRelease(int release) { this.release = release; }
+    public void setPublication(Integer publication){
+        this.publication = publication;
+
+    }
 }

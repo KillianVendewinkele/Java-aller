@@ -1,79 +1,65 @@
 package com.example.projet;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.ResourceBundle;
 
-import static java.lang.Integer.parseInt;
-
-public abstract class HelloController implements Initializable {
+public class HelloController implements Initializable {
 
     @FXML
-    private Label welcomeText;
+    private TableColumn<Book, String> author;
 
     @FXML
-    private TextField deci;
+    private TableColumn<Book, Integer> column;
 
     @FXML
-    private TextField binary;
+    private TableColumn<Book, Integer> publication;
 
     @FXML
-    private TextField roman;
+    private TableColumn<Book, String> resume;
 
     @FXML
-    private Button btnNew;
+    private TableColumn<Book, Integer> row;
 
     @FXML
-    private AnchorPane globalBiblio;
+    private TableView<Book> tableView;
 
     @FXML
-    private AnchorPane globalStats;
-
-    @FXML
-    private VBox VboxStats;
-
-    @FXML
-    private Button btnMenu;
-
-    @FXML
-    private VBox VboxTable;
-
-    @FXML
-    private VBox VboxBtn;
+    private TableColumn<Book, String> title;
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL location, ResourceBundle resources) {
+        title.setCellValueFactory(new PropertyValueFactory<Book, String>("title"));
 
-        globalStats.getChildren().removeAll(VboxStats);
-        btnNew.setOnMouseClicked(btnMeteo -> {
-            globalStats.getChildren().addAll(VboxStats);
-        });
+        author.setCellValueFactory(new PropertyValueFactory<Book, String>("author"));
 
-        //Decimal to Binary
-        deci.setOnAction(btnaction -> {
-            String binar = "";
+        resume.setCellValueFactory(new PropertyValueFactory<Book, String>("resume"));
 
-            for(int numb = 0; numb < Binary.binaryNum(parseInt(deci.getText()),parseInt(deci.getText()),parseInt(deci.getText())).size(); numb++ ) {
-                binar = binar + String.valueOf(Binary.binaryNum(parseInt(deci.getText()), parseInt(deci.getText()), parseInt(deci.getText())).get(numb));
-            }
-            binary.setText(binar);
-        });
+        column.setCellValueFactory(new PropertyValueFactory<Book, Integer>("column"));
 
-        //Binary to Decimal
-        binary.setOnAction(btnaction -> {
-            deci.setText(String.valueOf(Integer.parseInt(binary.getText(),2)));
-        });
+        row.setCellValueFactory(new PropertyValueFactory<Book, Integer>("row"));
 
-        //Roman number to Decimal
-        deci.setOnAction(btnaction -> {
-            //roman.setText(Roman.romanNumber(parseInt(decimal.getText())));
-        });
+        publication.setCellValueFactory(new PropertyValueFactory<Book, Integer>("publication"));
+
+        tableView.setItems(getBook());
+    }
+
+    public ObservableList<Book> getBook(){
+
+        ObservableList<Book> book = FXCollections.observableArrayList();
+
+        book.add(new Book("Harry Potter", "J.K Rowling",
+                "World of sorcery",5, 6,  1997));
+        return book;
     }
 }

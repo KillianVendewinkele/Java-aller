@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet.HelloController">
    <children>
       <VBox prefHeight="319.0" prefWidth="430.0">
          <children>
@@ -30,18 +30,13 @@
       <VBox layoutX="72.0" layoutY="319.0" prefHeight="26.0" prefWidth="175.0">
          <children>
             <HBox prefHeight="26.0" prefWidth="163.0">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="New">
-                     <HBox.margin>
-                        <Insets right="10.0" />
-                     </HBox.margin></Button>
-                  <Button fx:id="btnSupp" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="Delete" />
-               </children>
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </HBox>
          </children>
       </VBox>
+      <Button fx:id="btnsupp" layoutX="249.0" layoutY="343.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="Delete" />
+      <Button fx:id="btnadd" layoutX="90.0" layoutY="343.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="New" />
    </children>
 </AnchorPane>

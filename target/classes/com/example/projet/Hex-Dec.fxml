@@ -38,7 +38,7 @@
                         <Font size="18.0" />
                      </font>
                      <HBox.margin>
-                        <Insets right="15.0" />
+                        <Insets right="20.0" />
                      </HBox.margin>
                   </Label>
                </children>
@@ -52,13 +52,16 @@
                      <font>
                         <Font size="14.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
                   </TextField>
                   <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="75.0" text="&lt;--&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="deci" alignment="CENTER" prefHeight="38.0" prefWidth="93.0">
+                  <TextField fx:id="deci" alignment="CENTER" prefHeight="38.0" prefWidth="93.0" text="1">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -72,6 +75,9 @@
                      <font>
                         <Font size="14.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
                   </TextField>
                </children>
                <VBox.margin>
@@ -109,7 +115,7 @@
                         <Font size="14.0" />
                      </font>
                      <VBox.margin>
-                        <Insets left="60.0" right="60.0" />
+                        <Insets left="60.0" right="60.0" top="20.0" />
                      </VBox.margin>
                   </TextField>
                </children>

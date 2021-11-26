@@ -33,18 +33,24 @@
 -->
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet.HelloController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -87,23 +93,126 @@
     </MenuBar>
     <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane />
         <AnchorPane>
-          <children>
-                  <fx:include source="Bibliotheque.fxml" />
-          </children>
+               <children>
+                  <Button fx:id="library" layoutX="50.0" layoutY="47.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="125.0" text="Library">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="conversion" layoutX="50.0" layoutY="149.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="125.0" text="Conversion">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="army" layoutX="50.0" layoutY="253.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="125.0" text="Army">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
         </AnchorPane>
-        <ScrollPane prefHeight="-1.0" prefWidth="-1.0" />
+      <AnchorPane id="Content" fx:id="window" minHeight="-1.0" minWidth="-1.0" prefHeight="491.0" prefWidth="430.0">
+               <children>
+                  <AnchorPane fx:id="window1" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <fx:include source="Library.fxml" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="window2" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <fx:include source="Hex-Dec.fxml" />
+                     </children>
+                  </AnchorPane>
+               </children>
+      </AnchorPane>
+            <VBox fx:id="add" prefHeight="200.0" prefWidth="100.0">
+               <children>
+              <AnchorPane fx:id="add1" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="94.0" layoutY="14.0" prefHeight="22.0" prefWidth="33.0" text="Title" textAlignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="30.0" layoutY="43.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="84.0" layoutY="87.0" prefHeight="22.0" prefWidth="55.0" text="Author" textAlignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="31.0" layoutY="117.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="48.0" layoutY="194.0" prefHeight="22.0" prefWidth="62.0" text="Column" textAlignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="126.0" layoutY="188.0" prefHeight="35.0" prefWidth="33.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="78.0" layoutY="253.0" prefHeight="22.0" prefWidth="33.0" text="Row" textAlignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="80.0" layoutY="323.0" prefHeight="22.0" prefWidth="62.0" text="Release" textAlignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="397.0" prefHeight="22.0" prefWidth="71.0" text="Summary" textAlignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="126.0" layoutY="247.0" prefHeight="35.0" prefWidth="33.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <DatePicker layoutX="33.0" layoutY="353.0" prefHeight="26.0" prefWidth="160.0" />
+                        <TextArea layoutX="15.0" layoutY="425.0" prefHeight="82.0" prefWidth="190.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                        <Button layoutX="67.0" layoutY="518.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" text="Submit">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+              </AnchorPane>
+               </children>
+            </VBox>
       </items>
     </SplitPane>
     <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
       <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
         <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
       </children>
       <padding>
         <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
       </padding>
     </HBox>
-<AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0" />
   </children>
 </VBox>

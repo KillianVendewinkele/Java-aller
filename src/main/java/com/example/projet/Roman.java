@@ -3,6 +3,8 @@ package com.example.projet;
 public class Roman {
     public static String romanNumber(int num) {
         String roman = "";
+
+        //Checking every possibility of letter
         while(num != 0) {
             if (num == 100){
                 roman += "C";
